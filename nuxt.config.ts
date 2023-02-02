@@ -3,7 +3,7 @@ export default {
 	head: {
 		title: 'movue-it-nuxt',
 		htmlAttrs: {
-			lang: 'en',
+			lang: 'pt-BR',
 		},
 		meta: [
 			{ charset: 'utf-8' },
@@ -19,8 +19,8 @@ export default {
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
 	css: [
-		//'~/assets/css/global.css',
-		//'~/assets/css/components.css',
+		'~/assets/css/global.css',
+		'~/assets/css/components.css',
 	],
 
 	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
