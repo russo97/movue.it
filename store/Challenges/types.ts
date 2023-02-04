@@ -1,4 +1,3 @@
-
 import { MutationTree } from 'vuex';
 
 export interface XP {
@@ -38,14 +37,14 @@ export enum Mutations {
 	SET_CURRENT_CHALLENGE_INDEX = 'SET_CURRENT_CHALLENGE_INDEX',
 	SET_IS_LEVEL_UP_MODAL_OPEN = 'SET_IS_LEVEL_UP_MODAL_OPEN',
 	COMPLETE_CHALLENGE = 'COMPLETE_CHALLENGE',
-	SAVE_COOKIE_DATA = 'COMPLETE_CHALLENGE',
+	SAVE_COOKIE_DATA = 'SAVE_COOKIE_DATA',
 }
 
 export type RootState = ReturnType<() => State>;
 
-export interface MutationInterface extends MutationTree<RootState> {
+export interface MutationInterface extends MutationTree<any> {
 	[Mutations.SET_CURRENT_CHALLENGE_INDEX](state: State, payload: number): void;
 	[Mutations.SET_IS_LEVEL_UP_MODAL_OPEN](state: State, payload: boolean): void;
-	[Mutations.COMPLETE_CHALLENGE](state: State, payload: boolean): void;
+	[Mutations.COMPLETE_CHALLENGE](state: State, payload: number): void;
 	[Mutations.SAVE_COOKIE_DATA](state: State, payload: Cookie): void;
 }
