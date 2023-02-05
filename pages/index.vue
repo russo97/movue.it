@@ -7,5 +7,17 @@
 <script lang="ts">
 import Vue from 'vue';
 
-export default Vue.extend({});
+interface Head {
+	title: string;
+}
+
+export default Vue.extend({
+	name: 'Home',
+
+	head (): Head {
+		return {
+			title: 'Home | Movue.it',
+		};
+	},
+});
 </script>
