@@ -11,8 +11,5 @@ import Vue from 'vue';
 
 export default Vue.extend({
 	name: 'Default',
-
-	components: {
-	},
 });
 </script>
