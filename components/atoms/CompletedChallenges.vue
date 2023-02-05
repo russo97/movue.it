@@ -1,13 +1,13 @@
 <template>
-$END$
+	<div>
+		challenge
+	</div>
 </template>
 
-<script>
-export default {
-name: "CompletedChallenges"
-}
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+	name: 'CompletedChallenges',
+});
 </script>
-
-<style scoped>
-
-</style>
