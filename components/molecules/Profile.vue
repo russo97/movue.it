@@ -1,13 +1,13 @@
 <template>
-$END$
+	<div>
+		profile
+	</div>
 </template>
 
-<script>
-export default {
-name: "Profile"
-}
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+	name: 'Profile',
+});
 </script>
-
-<style scoped>
-
-</style>
