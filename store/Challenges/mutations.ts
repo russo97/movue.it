@@ -36,17 +36,12 @@ export default {
 			return;
 		}
 
-		state.xp = {
-			...state.xp,
+		state.xp = Object.assign({}, state.xp, {
 			current: currentTotalXP,
-		};
+		});
 	},
 
-	[Mutations.SAVE_COOKIE_DATA] (state, { level, xp, completedChallenges }) {
-		Object.assign(state, {
-			xp,
-			level,
-			completedChallenges,
-		});
+	[Mutations.SAVE_COOKIE_DATA] (state, { xp, level, completedChallenges }) {
+		[state.xp, state.level, state.completedChallenges] = [xp, level, completedChallenges];
 	},
 } as MutationInterface;
