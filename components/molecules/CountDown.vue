@@ -1,0 +1,17 @@
+<template>
+	<div>
+		countdown
+	</div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+	name: 'CountDown',
+});
+</script>
+
+<style scoped>
+
+</style>
