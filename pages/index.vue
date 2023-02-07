@@ -56,6 +56,12 @@ export default Vue.extend({
 		};
 	},
 
+	mounted () {
+		if ('Notification' in window) {
+			Notification.requestPermission();
+		}
+	},
+
 	computed: {
 		...mapState('Countdown', {
 			isCountdownActive: 'isActive',
