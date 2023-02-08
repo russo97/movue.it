@@ -86,7 +86,7 @@ export default Vue.extend({
 			this.setCountDownHasCompleted(true);
 
 			if (Notification?.permission === 'granted') {
-				playAudio('/notification.mp3');
+				playAudio('/static_notification.mp3');
 
 				sendNotification('New Challenge!', {
 					body: 'A new challenge has started! Go complete it!',
