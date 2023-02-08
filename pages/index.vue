@@ -41,6 +41,8 @@ import Vue from 'vue';
 
 import { mapState, mapMutations } from 'vuex';
 
+import { playAudio, sendNotification } from '~/utils';
+
 import { Mutations as CountdownMutations } from '~/store/Countdown/types';
 
 interface Head {
@@ -82,6 +84,15 @@ export default Vue.extend({
 
 		getNewChallenge () {
 			this.setCountDownHasCompleted(true);
+
+			if (Notification?.permission === 'granted') {
+				playAudio('/notification.mp3');
+
+				sendNotification('New Challenge!', {
+					body: 'A new challenge has started! Go complete it!',
+					icon: '/favicon.png',
+				});
+			}
 		},
 	},
 });
