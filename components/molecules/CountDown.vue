@@ -40,7 +40,7 @@ export default Vue.extend({
 			resetTime: Mutations.RESET_TIME,
 		}),
 
-		runCountdown (flag: boolean) {
+		runCountdown (flag: boolean): void {
 			if (this.isActive && flag) {
 				TIMEOUT_REFERENCE = setTimeout(() => {
 					this.setTime(this.time - 1);
@@ -64,7 +64,7 @@ export default Vue.extend({
 
 		time (newValue: number) {
 			if (newValue > 0) {
-				return this.runCountdown(true);
+				return (this as any).runCountdown(true);
 			}
 
 			this.$emit('completed');
